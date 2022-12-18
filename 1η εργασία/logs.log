@@ -6570,3 +6570,6 @@
       normalize=True, positive=False, precompute=False, random_state=123,
       selection='cyclic', tol=0.0001, warm_start=False)
 2022-12-11 15:25:01,619:INFO:tune_model() succesfully completed......................................
+2022-12-18 19:30:04,511:INFO:Initializing create_model()
+2022-12-18 19:30:04,522:INFO:create_model(estimator=10, fold=None, round=4, cross_validation=True, predict=True, fit_kwargs=None, groups=None, refit=True, verbose=True, system=True, metrics=None, experiment_custom_tags=None, add_to_model_list=True, probability_threshold=None, display=None, return_train_score=False, kwargs={})
+2022-12-18 19:30:04,522:INFO:Checking exceptions
