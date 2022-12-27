@@ -4075,3 +4075,48 @@ OSError: [Errno 22] Invalid argument
 2022-12-27 10:15:23,740:INFO:Scoring test/hold-out set
 2022-12-27 10:15:26,733:INFO:Visual Rendered Successfully
 2022-12-27 10:15:26,879:INFO:plot_model() succesfully completed......................................
+2022-12-27 10:29:20,035:INFO:Initializing plot_model()
+2022-12-27 10:29:20,036:INFO:plot_model(fold=None, use_train_data=False, verbose=True, is_in_evaluate=False, display=None, display_format=None, estimator=LogisticRegression(C=2.833, class_weight='balanced', dual=False,
+                   fit_intercept=True, intercept_scaling=1, l1_ratio=None,
+                   max_iter=1000, multi_class='auto', n_jobs=None, penalty='l2',
+                   random_state=123, solver='lbfgs', tol=0.0001, verbose=0,
+                   warm_start=False), feature_name=None, fit_kwargs=None, groups=None, label=False, plot=confusion_matrix, plot_kwargs=None, save=False, scale=1, system=True)
+2022-12-27 10:29:20,037:INFO:Checking exceptions
+2022-12-27 10:29:20,040:INFO:Preparing display monitor
+2022-12-27 10:29:20,050:INFO:Preloading libraries
+2022-12-27 10:29:20,052:INFO:Copying training dataset
+2022-12-27 10:29:20,054:INFO:Copying test dataset
+2022-12-27 10:29:20,231:INFO:Plot type: confusion_matrix
+2022-12-27 10:29:20,239:INFO:Initializing get_config()
+2022-12-27 10:29:20,242:INFO:get_config(variable=prep_pipe)
+2022-12-27 10:29:20,252:INFO:Global variable: prep_pipe returned as Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=False, features_todrop=[],
+                                      id_columns=[],
+                                      ml_usecase='classification',
+                                      numerical_features=[],
+                                      target='Cover_Type', time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='not_available',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None,
+                                numeric_...
+                ('feature_select', 'passthrough'),
+                ('fix_multi',
+                 Fix_multicollinearity(correlation_with_target_preference=None,
+                                       correlation_with_target_threshold=0.0,
+                                       target_variable='Cover_Type',
+                                       threshold=0.6)),
+                ('dfs', 'passthrough'),
+                ('pca',
+                 Reduce_Dimensions_For_Supervised_Path(method='pca_liner',
+                                                       random_state=123,
+                                                       target='Cover_Type',
+                                                       variance_retained_or_number_of_components=None))],
+         verbose=False)
+2022-12-27 10:29:20,254:INFO:get_config() succesfully completed......................................
+2022-12-27 10:29:20,270:INFO:Fitting Model
+2022-12-27 10:29:20,273:INFO:Scoring test/hold-out set
+2022-12-27 10:29:21,143:INFO:Visual Rendered Successfully
+2022-12-27 10:29:21,298:INFO:plot_model() succesfully completed......................................
