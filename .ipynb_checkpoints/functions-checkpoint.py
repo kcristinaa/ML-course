@@ -5,16 +5,17 @@ def MAPE(y_true, y_pred):
     y_true, y_pred = np.array(y_true), np.array(y_pred)
     return np.mean(np.abs((y_true - y_pred) / np.maximum(np.ones(len(y_true)), np.abs(y_true))))*100
 
-def plot_train_test_errors_ridge(train_errors, test_errors, lambd_values):
+def plot_train_test_errors_ridge(train_errors, test_errors, lambd_values, error, model):
     plt.plot(np.log10(lambd_values), train_errors, 'r--', label = 'Train error')
     plt.plot(np.log10(lambd_values), test_errors, 'b--', label = 'Test error')
     plt.xlabel('logα')
-    plt.ylabel('MSE')
+    plt.ylabel('%s'%error)
     plt.legend()
-    plt.title('MSE (with Ridge Regression) vs alpha')
+    plt.title('%s (with %s Regression) vs alpha'%(error,model))
+    plt.savefig("visualizations/assignment2/%s_errors_%s.png"%(error, model),bbox_inches='tight')
     plt.show()
-
-def plot_train_test_errors_lasso(train_errors, test_errors, lambd_values):
+    
+def plot_train_test_errors_lasso(train_errors, test_errors, lambd_values, s):
     plt.plot(np.log10(lambd_values), train_errors, 'r--', label = 'Train error')
     plt.plot(np.log10(lambd_values), test_errors, 'b--', label = 'Test error')
     plt.xlabel('logα')
